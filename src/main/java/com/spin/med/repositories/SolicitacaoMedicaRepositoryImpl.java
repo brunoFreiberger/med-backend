@@ -16,12 +16,12 @@ public class SolicitacaoMedicaRepositoryImpl implements SolicitacaoMedicaCustomR
 	private EntityManager em;
 
 	@Override
-	public Boolean verifyPermission(Long code, Integer age, String sex) {
+	public Boolean verifyPermission(Long codigo, Integer idade, String sexo) {
 		QProcedimentoMedico procedimentoMedico = QProcedimentoMedico.procedimentoMedico;
 		BooleanBuilder predicate = new BooleanBuilder();
 		predicate.and(
-				procedimentoMedico.code.eq(code).and(procedimentoMedico.age.eq(age).and(procedimentoMedico.sex.eq(sex))));
-		Boolean result = new JPAQueryFactory(em).select(procedimentoMedico.allowed).from(procedimentoMedico)
+				procedimentoMedico.codigo.eq(codigo).and(procedimentoMedico.idade.eq(idade).and(procedimentoMedico.sexo.eq(sexo))));
+		Boolean result = new JPAQueryFactory(em).select(procedimentoMedico.permitido).from(procedimentoMedico)
 				.where(predicate).fetchOne();
 		return result;
 	}

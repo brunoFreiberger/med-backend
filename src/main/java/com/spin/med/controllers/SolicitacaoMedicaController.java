@@ -21,10 +21,10 @@ public class SolicitacaoMedicaController {
 	@Autowired
 	private SolicitacaoMedicaService solicitacaoMedicaService;
 
-	@GetMapping(path = "/procedimento/{code}/idade/{age}/sexo/{sex}")
-	public @ResponseBody ResponseEntity<Boolean> verifyPermission(@PathVariable Long code, @PathVariable Integer age,
-			@PathVariable String sex) {
-		Boolean res = this.solicitacaoMedicaService.verifyPermission(code, age, sex);
+	@GetMapping(path = "/procedimento/{codigo}/idade/{idade}/sexo/{sexo}")
+	public @ResponseBody ResponseEntity<Boolean> verifyPermission(@PathVariable Long codigo, @PathVariable Integer idade,
+			@PathVariable String sexo) {
+		Boolean res = this.solicitacaoMedicaService.verifyPermission(codigo, idade, sexo);
 		return new ResponseEntity<>(res, HttpStatus.OK);
 	}
 

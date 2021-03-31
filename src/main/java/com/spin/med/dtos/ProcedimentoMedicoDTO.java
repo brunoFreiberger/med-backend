@@ -3,10 +3,10 @@ package com.spin.med.dtos;
 public class ProcedimentoMedicoDTO {
 
 	private Long id;
-	private Long code;
-	private String sex;
-	private Integer age;
-	private Boolean allowed;
+	private Long codigo;
+	private String sexo;
+	private Integer idade;
+	private Boolean permitido;
 
 	public Long getId() {
 		return id;
@@ -16,36 +16,38 @@ public class ProcedimentoMedicoDTO {
 		this.id = id;
 	}
 
-	public Long getCode() {
-		return code;
+	public Long getCodigo() {
+		return codigo;
 	}
 
-	public void setCode(Long code) {
-		this.code = code;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 
-	public String getSex() {
-		return sex;
+	public String getSexo() {
+		return sexo;
 	}
 
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
-	public Integer getAge() {
-		return age;
+	public Integer getIdade() {
+		return idade;
 	}
 
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setIdade(Integer idade) {
+		this.idade = idade;
 	}
 
-	public Boolean getAllowed() {
-		return allowed;
+	public Boolean getPermitido() {
+		return permitido;
 	}
 
-	public void setAllowed(Boolean allowed) {
-		this.allowed = allowed;
+	public void setPermitido(Boolean permitido) {
+		this.permitido = permitido;
 	}
+
+	
 
 }

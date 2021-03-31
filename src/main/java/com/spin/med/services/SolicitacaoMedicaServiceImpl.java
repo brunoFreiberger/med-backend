@@ -15,8 +15,8 @@ public class SolicitacaoMedicaServiceImpl implements SolicitacaoMedicaService {
 	private SolicitacaoMedicaRepository solicitacaoMedicaRepository;
 
 	@Override
-	public Boolean verifyPermission(Long id, Integer age, String sex) {
-		Boolean res = solicitacaoMedicaRepository.verifyPermission(id, age, sex);
+	public Boolean verifyPermission(Long codigo, Integer idade, String sexo) {
+		Boolean res = solicitacaoMedicaRepository.verifyPermission(codigo, idade, sexo);
 		return res != null && res;
 	}
 	

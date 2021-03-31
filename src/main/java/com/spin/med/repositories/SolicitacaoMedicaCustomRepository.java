@@ -2,6 +2,6 @@ package com.spin.med.repositories;
 
 public interface SolicitacaoMedicaCustomRepository {
 
-	public Boolean verifyPermission(Long code, Integer age, String sex);
+	public Boolean verifyPermission(Long codigo, Integer idade, String sexo);
 
 }

@@ -23,19 +23,20 @@ public class ProcedimentoMedico {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
 
-	@Column(name = "cod_proc")
-	private Long code;
+	@Column(name = "codigo")
+	private Long codigo;
 
-	@Column(name = "sex")
-	private String sex;
+	@Column(name = "sexo")
+	private String sexo;
 
-	@Column(name = "age")
-	private Integer age;
+	@Column(name = "idade")
+	private Integer idade;
 
-	@Column(name = "allowed")
-	private Boolean allowed;
+	@Column(name = "permitido")
+	private Boolean permitido;
 
 	public Long getId() {
 		return id;
@@ -45,36 +46,36 @@ public class ProcedimentoMedico {
 		this.id = id;
 	}
 
-	public Long getCode() {
-		return code;
+	public Long getCodigo() {
+		return codigo;
 	}
 
-	public void setCode(Long code) {
-		this.code = code;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 
-	public String getSex() {
-		return sex;
+	public String getSexo() {
+		return sexo;
 	}
 
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
-	public Integer getAge() {
-		return age;
+	public Integer getIdade() {
+		return idade;
 	}
 
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setIdade(Integer idade) {
+		this.idade = idade;
 	}
 
-	public Boolean getAllowed() {
-		return allowed;
+	public Boolean getPermitido() {
+		return permitido;
 	}
 
-	public void setAllowed(Boolean allowed) {
-		this.allowed = allowed;
+	public void setPermitido(Boolean permitido) {
+		this.permitido = permitido;
 	}
 
 }
