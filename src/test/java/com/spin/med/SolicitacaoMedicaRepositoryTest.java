@@ -22,18 +22,18 @@ public class SolicitacaoMedicaRepositoryTest {
 	public void saveTest() {
 		ProcedimentoMedicoDTO dto = this.getDTO();
 		ProcedimentoMedico res = repository.save(new ModelMapper().map(dto, ProcedimentoMedico.class));
-		assertEquals(res.getCode(), dto.getCode());
-		assertEquals(res.getAge(), dto.getAge());
-		assertEquals(res.getSex(), dto.getSex());
+		assertEquals(res.getCodigo(), dto.getCodigo());
+		assertEquals(res.getIdade(), dto.getIdade());
+		assertEquals(res.getSexo(), dto.getSexo());
 	}
 
 	@Test
 	public void verifyIsAllowed() {
 		ProcedimentoMedicoDTO dto = this.getDTO();
 		repository.save(new ModelMapper().map(dto, ProcedimentoMedico.class));
-		assertEquals(repository.verifyPermission(dto.getCode(), dto.getAge(), dto.getSex()), Boolean.TRUE);
+		assertEquals(repository.verifyPermission(dto.getCodigo(), dto.getIdade(), dto.getSexo()), Boolean.TRUE);
 	}
-	
+
 	@Test
 	public void verifyIsDanied() {
 		Boolean danied = repository.verifyPermission(888l, 99, "F");
@@ -42,10 +42,10 @@ public class SolicitacaoMedicaRepositoryTest {
 
 	private ProcedimentoMedicoDTO getDTO() {
 		ProcedimentoMedicoDTO dto = new ProcedimentoMedicoDTO();
-		dto.setCode(999l);
-		dto.setAge(40);
-		dto.setSex("M");
-		dto.setAllowed(Boolean.TRUE);
+		dto.setCodigo(999l);
+		dto.setIdade(40);
+		dto.setSexo("M");
+		dto.setPermitido(Boolean.TRUE);
 		return dto;
 	}
 

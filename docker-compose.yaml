@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: med
+      MYSQL_ROOT_PASSWORD: root
+  med:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: med
+    container_name: med-app
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
