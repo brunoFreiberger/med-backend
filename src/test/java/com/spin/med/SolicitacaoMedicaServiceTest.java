@@ -19,12 +19,12 @@ import com.spin.med.services.SolicitacaoMedicaServiceImpl;
 
 @RunWith(SpringRunner.class)
 public class SolicitacaoMedicaServiceTest {
-
+	
 	@TestConfiguration
-	static class EmployeeServiceImplTestContextConfiguration {
+	static class SolicitacaoMedicaServiceTestContextConfiguration {
 
 		@Bean
-		public SolicitacaoMedicaService employeeService() {
+		public SolicitacaoMedicaService solicitacaoMedicaService() {
 			return new SolicitacaoMedicaServiceImpl();
 		}
 	}
